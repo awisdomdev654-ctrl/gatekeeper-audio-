@@ -1,5 +1,5 @@
 import { connectDB, isMongoConfigured } from './mongodb'
-import { AuditEventModel } from '@/models/AuditEvent'
+import { AuditEventModel } from '../models/AuditEvent'
 
 export async function logAuditEvent(input: {
   actorId?: string

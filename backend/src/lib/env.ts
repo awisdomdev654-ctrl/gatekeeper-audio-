@@ -7,7 +7,7 @@ const envSchema = z.object({
   AWS_SECRET_ACCESS_KEY: z.string().optional(),
   S3_BUCKET: z.string().optional(),
   GATEKEEPER_MOCK_CLOUD: z
-    .enum(['true', 'false'])
+    .string()
     .optional()
     .transform((v) => v === 'true'),
   GATEKEEPER_SIGNED_URL_SECONDS: z.coerce.number().min(60).max(3600).optional(),
