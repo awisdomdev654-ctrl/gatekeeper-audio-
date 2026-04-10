@@ -8,12 +8,13 @@ function App() {
   ]
 
   const recentActivity = [
-    '10:21 AM - Producer uploaded "SZA Vox Lead v4"',
-    '10:28 AM - Signed URL issued to Mix Engineer (expires in 10 mins)',
-    '10:42 AM - Security scan passed on latest frontend build',
-    '11:03 AM - New version tagged for "Jazmine Chorus Stack"',
+    { id: 'ACT-1001', message: '10:21 AM - Producer uploaded "SZA Vox Lead v4"' },
+    { id: 'ACT-1002', message: '10:28 AM - Signed URL issued to Mix Engineer (expires in 10 mins)' },
+    { id: 'ACT-1003', message: '10:42 AM - Security scan passed on latest frontend build' },
+    { id: 'ACT-1004', message: '11:03 AM - New version tagged for "Jazmine Chorus Stack"' },
   ]
 
+  
   return (
     <main className="app">
       <header className="topbar">
@@ -75,7 +76,7 @@ function App() {
           <h3>Recent Audit Activity</h3>
           <ul className="audit-list">
             {recentActivity.map((activity) => (
-              <li key={activity}>{activity}</li>
+              <li key={activity.id}>{activity.message}</li>
             ))}
           </ul>
           <div className="panel-footer">
