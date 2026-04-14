@@ -1,22 +1,36 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
 body {
   margin: 0;
-  min-height: 100vh;
+  min-height: 100%;
+}
+
+body {
   font-family:
     Inter,
     system-ui,
     -apple-system,
-    Segoe UI,
+    'Segoe UI',
     Roboto,
     sans-serif;
-  background: radial-gradient(circle at 20% -10%, #17382b, transparent 45%),
-    #0a0d14;
-  color: #d6deec;
+  font-size: 16px;
+  line-height: 1.45;
+  color: #a1a1aa;
+  background:
+    radial-gradient(
+      ellipse 85% 55% at 0% 0%,
+      rgba(16, 185, 129, 0.14),
+      transparent 52%
+    ),
+    #0a0a0a;
+  -webkit-font-smoothing: antialiased;
 }
 
 #root {
-  width: min(1160px, 100%);
-  margin: 0 auto;
   min-height: 100vh;
-  display: flex;
-  box-sizing: border-box;
 }

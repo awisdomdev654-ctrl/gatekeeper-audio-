@@ -1,24 +1,40 @@
 import './App.css'
 
-function App() {
+export default function App() {
   const stemQueue = [
     { id: 'STEM-1023', title: 'SZA Vox Lead v4', owner: 'A&R Team', status: 'Encrypted' },
-    { id: 'STEM-1024', title: 'Jazmine Chorus Stack', owner: 'Producer Desk', status: 'Awaiting Review' },
-    { id: 'STEM-1025', title: '808 Bounce Alt Mix', owner: 'Mix Engineer', status: 'Signed URL Active' },
+    {
+      id: 'STEM-1024',
+      title: 'Jazmine Chorus Stack',
+      owner: 'Producer Desk',
+      status: 'Awaiting Review',
+    },
+    {
+      id: 'STEM-1025',
+      title: '808 Bounce Alt Mix',
+      owner: 'Mix Engineer',
+      status: 'Signed URL Active',
+    },
   ]
 
   const recentActivity = [
-    { id: 'ACT-1001', message: '10:21 AM - Producer uploaded "SZA Vox Lead v4"' },
-    { id: 'ACT-1002', message: '10:28 AM - Signed URL issued to Mix Engineer (expires in 10 mins)' },
+    { id: 'ACT-1001', message: "10:21 AM - Producer uploaded 'SZA Vox Lead v4'" },
+    {
+      id: 'ACT-1002',
+      message:
+        "10:28 AM - Signed URL issued to Mix Engineer (expires in 10 mins)",
+    },
     { id: 'ACT-1003', message: '10:42 AM - Security scan passed on latest frontend build' },
-    { id: 'ACT-1004', message: '11:03 AM - New version tagged for "Jazmine Chorus Stack"' },
+    {
+      id: 'ACT-1004',
+      message: "11:03 AM - New version tagged for 'Jazmine Chorus Stack'",
+    },
   ]
 
-  
   return (
     <main className="app">
       <header className="topbar">
-        <div>
+        <div className="topbar-copy">
           <p className="eyebrow">Gatekeeper Audio</p>
           <h1>Secure Stem Vault Dashboard</h1>
           <p className="subtitle">
@@ -28,7 +44,7 @@ function App() {
         <div className="security-pill">AES-256 at Rest - Signed URLs: 10m</div>
       </header>
 
-      <section className="metrics-grid">
+      <section className="metrics-grid" aria-label="Vault metrics">
         <article className="metric-card">
           <p>Active Sessions</p>
           <h2>14</h2>
@@ -84,26 +100,6 @@ function App() {
           </div>
         </article>
       </section>
-
-      <section className="roadmap">
-        <h3>Frontend Next Steps</h3>
-        <div className="roadmap-items">
-          <div>
-            <strong>Auth UI</strong>
-            <p>Add role-based routes for producer, engineer, and admin views.</p>
-          </div>
-          <div>
-            <strong>Upload Flow</strong>
-            <p>Connect dropzone to backend endpoint and show progress states.</p>
-          </div>
-          <div>
-            <strong>Security UX</strong>
-            <p>Display URL expiration countdown and access warnings in real time.</p>
-          </div>
-        </div>
-      </section>
     </main>
   )
 }
-
-export default App
